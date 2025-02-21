@@ -1,0 +1,41 @@
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "compilerOptions": {
+    "lib": [
+      "esnext",
+      "ES2021.String"
+    ],
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "module": "Node16",
+    "moduleResolution": "Node16",
+    "target": "esnext",
+    "removeComments": true,
+    "baseUrl": "./src",
+    "sourceMap": false,
+    "declaration": true,
+    "typeRoots": [
+      "node_modules/@types"
+    ],
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noEmit": false,
+    "useDefineForClassFields": false,
+    "importHelpers": true,
+    "outDir": "dist"
+  },
+  "include": [
+    "src/**/*"
+  ],
+  "ts-node": {
+    "transpileOnly": false,
+    "files": true,
+    "experimentalResolver": true
+  },
+  "exclude": [
+    "node_modules"
+  ]
+}
