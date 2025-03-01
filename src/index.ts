@@ -2,7 +2,7 @@ import { app, BrowserWindow } from 'electron'
 import * as path from 'path'
 import initServices from './services'
 import initListeners from './listeners'
-
+import SerialUtil from './utils/serial.util'
 
 function createWindow() {
     const mainWindow = new BrowserWindow({
@@ -17,12 +17,13 @@ function createWindow() {
         }
     })
 
-    mainWindow.loadFile(path.join(__dirname, '../front/index.html'))
+    mainWindow.loadFile(path.join(__dirname, '../front/non-init.html'))
 
     mainWindow.setMenuBarVisibility(false)
 
     const sevices = initServices()
     initListeners(sevices)
+    new SerialUtil('COM3', 9600)
 
     mainWindow.on('closed', async () => {
         app.quit()

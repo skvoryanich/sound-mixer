@@ -16,8 +16,9 @@
     "sourceMap": false,
     "declaration": true,
     "typeRoots": [
-      "node_modules/@types"
+      "./node_modules/@types"
     ],
+
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
     "noUnusedLocals": true,
